@@ -2,6 +2,11 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
+<div>
+    <a href="{% url 'index' %}">Home</a>
+    <a href="{% url 'about' %}">about</a>
+</div>
+
 {% block content %}
 {% endblock content %}
 
