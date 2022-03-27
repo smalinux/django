@@ -1,4 +1,6 @@
-
+<body>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 {% include 'parts/footer.html' %}
 
@@ -14,3 +16,4 @@
 {% for x in name %}
     <p> {{x}}</p>
 {% endfor %}
+</body>
