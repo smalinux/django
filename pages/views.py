@@ -14,4 +14,4 @@ def index(request):
     return render(request, 'pages/index.html', x)
 
 def about(request):
-    return HttpResponse('about pages')
+    return render(request, 'pages/about.html')

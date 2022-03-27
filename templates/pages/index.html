@@ -3,15 +3,16 @@
 
 
 {% block content %}
-<h1>test</h1>
-<h4>name = {{name|capfirst}}</h4>
-<h4>name = {{last|default:'not found'}}</h4>
-<h4>name = {{full|slice:':4'}}</h4>
-<h4>name = {{full|length}}</h4>
-<h4>name = {{name|add:' Sohaib'}}</h4>
-<h4>name = {{full|cut:' '}}</h4>
-<h4>GB = {{age|filesizeformat}}</h4>
+    <h1>test</h1>
+    <h4>name = {{name|capfirst}}</h4>
+    <h4>name = {{last|default:'not found'}}</h4>
+    <h4>name = {{full|slice:':4'}}</h4>
+    <h4>name = {{full|length}}</h4>
+    <h4>name = {{name|add:' Sohaib'}}</h4>
+    <h4>name = {{full|cut:' '}}</h4>
+    <h4>GB = {{age|filesizeformat}}</h4>
 
+    {% include 'parts/footer.html' %}
 {% endblock content %}
 
 
