@@ -1,0 +1,41 @@
+sudo pip3 install virtualenv
+
+Virtual env:
+--------------------------------------------
+# create new env
+$ virtualenv test
+
+# active this env:
+--------------------------------------------
+test $ source bin/activate
+
+
+Install packages:
+--------------------------------------------
+pip3 install django
+
+
+Create new django project:
+--------------------------------------------
+(test) Fedora@test $ django-admin startproject myproject
+
+Start the server:
+--------------------------------------------
+(test) Fedora@myproject $ python manage.py migrate
+(test) Fedora@myproject $ python manage.py runserver
+
+
+Accessing django project in LAN systems
+https://stackoverflow.com/a/15473083/5688267
+---------------------------------------
+in settings.py:
+    ALLOWED_HOSTS = ['macbook1.local']
+(test) Fedora@myproject $ python manage.py runserver 0.0.0.0:8000
+
+
+-------------------------------------------------------------------------------
+
+Create new app
+---------------------------------------
+(test) Fedora@myproject $ python manage.py startapp profiles
+
