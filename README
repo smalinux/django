@@ -13,6 +13,7 @@ test $ source bin/activate
 Install packages:
 --------------------------------------------
 pip3 install django
+pip3 install Pillow
 
 
 Create new django project:
@@ -38,4 +39,33 @@ in settings.py:
 Create new app
 ---------------------------------------
 (test) Fedora@myproject $ python manage.py startapp profiles
+
+
+Collect static files w/ move static files to test/myproject
+---------------------------------------
+(test) Fedora@myproject $ python3 manage.py collectstatic
+
+models.py
+---------------------------------------
+- every change in db needs 'migrate'
+
+Create new user for admin page
+---------------------------------------
+(test) Fedora@myproject $ python3 manage.py createsuperuser
+
+Create new table into the db
+---------------------------------------
+(test) Fedora@myproject $ python3 manage.py makemigrations
+(test) Fedora@myproject $ python3 manage.py migrate
+
+
+
+
+
+
+
+
+
+
+
 
