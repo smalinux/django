@@ -1,3 +1,11 @@
 
 
 {% include 'parts/footer.html' %}
+
+{% if name == 'ali' %}
+    <p> Hi, ali</p>
+{% elif name == 'Sohaib' %}
+    <p> Sohaib</p>
+{% else %}
+    <p> No name</p>
+{% endif %}
