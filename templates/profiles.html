@@ -2,18 +2,27 @@
 
 {% block content %}
 
-{% comment %}
-    {% for x in pro %}
+    {% for x in exclude %}
 
         <h4>{{x.name}}</h4>
         <p>{{x.content}}</p>
         <p>{{x.price}}</p>
 
     {% endfor %}
-{% endcomment %}
 
+    <hr>
 
     <h4>{{pro.name}}</h4>
+
+    <hr>
+
+    <h4> count = {{count}}</h4>
+
+    <hr>
+
+    <h4>{{exact}}</h4>
+
+    <hr>
 
 {% endblock content %}
 

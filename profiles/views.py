@@ -9,7 +9,22 @@ def profile(request):
 
 # SMA: Every funcion == 1 page
 def profiles(request):
-    ## Get all from db
-    #return render(request, 'profiles.html', {'pro': Profile.objects.all()})
-    # Set spacific element
-    return render(request, 'profiles.html', {'pro':Profile.objects.get(name='Sohaib')})
+    ctx = {
+            # Set spacific element by ID
+            'pro': Profile.objects.get(id=2),
+            # Set spacific element by name
+            'soo': Profile.objects.get(name='Sohaib'),
+            ## Get all from db
+            'all': Profile.objects.all(),
+            # filter
+            'f': Profile.objects.all().filter(),
+            # order_by
+            'o': Profile.objects.all().order_by('price'),
+            # get only the count of elements in the database
+            'count': Profile.objects.all().count(),
+            # exclude
+            'exclude': Profile.objects.all().exclude(name='Sohaib'),
+            # exact filter
+            'exact': Profile.objects.all().filter(name__exact='Sohaib'),
+    }
+    return render(request, 'profiles.html', ctx)
