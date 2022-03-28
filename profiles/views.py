@@ -7,5 +7,9 @@ from .models import Profile
 def profile(request):
     return render(request, 'profile.html')
 
+# SMA: Every funcion == 1 page
 def profiles(request):
-    return render(request, 'profiles.html', {'pro': Profile.objects.all()})
+    ## Get all from db
+    #return render(request, 'profiles.html', {'pro': Profile.objects.all()})
+    # Set spacific element
+    return render(request, 'profiles.html', {'pro':Profile.objects.get(name='Sohaib')})
