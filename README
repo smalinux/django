@@ -31,19 +31,19 @@ https://stackoverflow.com/a/15473083/5688267
 ---------------------------------------
 in settings.py:
     ALLOWED_HOSTS = ['macbook1.local']
-(test) Fedora@myproject $ python manage.py runserver 0.0.0.0:8000
+(test) Fedora@myproject $ ./manage.py runserver 0.0.0.0:8000
 
 
 -------------------------------------------------------------------------------
 
 Create new app
 ---------------------------------------
-(test) Fedora@myproject $ python manage.py startapp profiles
+(test) Fedora@myproject $ ./manage.py startapp profiles
 
 
 Collect static files w/ move static files to test/myproject
 ---------------------------------------
-(test) Fedora@myproject $ python3 manage.py collectstatic
+(test) Fedora@myproject $ ./manage.py collectstatic
 
 models.py
 ---------------------------------------
@@ -51,12 +51,12 @@ models.py
 
 Create new user for admin page
 ---------------------------------------
-(test) Fedora@myproject $ python3 manage.py createsuperuser
+(test) Fedora@myproject $ ./manage.py createsuperuser
 
 Create new table into the db
 ---------------------------------------
-(test) Fedora@myproject $ python3 manage.py makemigrations
-(test) Fedora@myproject $ python3 manage.py migrate
+(test) Fedora@myproject $ ./manage.py makemigrations
+(test) Fedora@myproject $ ./manage.py migrate
 
 
 
